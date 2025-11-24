@@ -1,1 +1,72 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
 
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://hselive--dev2.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DS8000006BiMV" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"v3_recaptcha","fallback":"true","orgId":"00DS8000006BiMV","ts":""}'>
+<input type=hidden name="orgid" value="00DS8000006BiMV">
+<input type=hidden name="retURL" value="http://">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail" value="lokess@deloitte.com">     -->
+<!--  ----------------------------------------------------------------------  -->
+
+<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+<label for="description">Description</label><textarea name="description"></textarea><br>
+
+<label for="status">Status</label><select  id="status" name="status"><option value="">--None--</option><option value="New">New</option>
+<option value="Unassigned">Unassigned</option>
+<option value="Researching">Researching</option>
+<option value="In Progress">In Progress</option>
+<option value="Waiting For Details">Waiting For Details</option>
+<option value="Waiting For Customer">Waiting For Customer</option>
+<option value="On Hold">On Hold</option>
+<option value="Escalated">Escalated</option>
+<option value="Closed">Closed</option>
+<option value="With Third Party">With Third Party</option>
+</select><br>
+
+<label for="reason">Case Reason</label><select  id="reason" name="reason"><option value="">--None--</option><option value="User didn&#39;t attend training">User didn&#39;t attend training</option>
+<option value="Complex functionality">Complex functionality</option>
+<option value="Existing problem">Existing problem</option>
+<option value="Instructions not clear">Instructions not clear</option>
+<option value="New problem">New problem</option>
+</select><br>
+
+<label for="recordType">Case Record Type</label><select  id="recordType" name="recordType"><option value="">--None--</option><option value="012WV000000Yty9">App Support</option>
+<option value="012S8000003QKhJ">Ask Our Breastfeeding Expert</option>
+<option value="012S8000003QKhK">Health Service Support</option>
+<option value="012S8000006LVN7">HID</option>
+<option value="012S8000003lOZp">Quit</option>
+<option value="012S8000004YgVZ">Vaccine</option>
+</select><br>
+
+<input type="hidden"  id="external" name="external" value="1" /><br>
+<input type="hidden" name="origin" value="Web">
+<input type="hidden" name="debug" value="1">
+
+<div class="g-recaptcha" data-sitekey="6LcFrBYsAAAAANU2FKjCc-KbCUsoLTyVQ8ZDK0i_"></div><br>
+<input type="submit" name="submit">
+
+</form>

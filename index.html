@@ -93,8 +93,10 @@ Location <select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location"><
 <option value="With Third Party">With Third Party</option>
 </select><br> -->
 
-<label for="reason">Case Reason</label><select  id="reason" name="reason"><option value="">--None--</option><option value="User didn&#39;t attend training">User didn&#39;t attend training</option>
-<option value="Complex functionality">HID Reason</option>
+<label for="reason">Query Type</label><select  id="casereason" name="casereason">
+<option value="IHI Purge">IHI Purge</option>
+<option value="DSP Review">DSP Review</option>
+<option value="IHI Assignment">IHI Assignment</option>
 </select><br>
 
  <select  type=hidden id="recordType" name="recordType"><option value="012S8000006LVN7">HIDS</option>
@@ -105,7 +107,7 @@ Location <select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location"><
 </select><br> -->
 
 <input type="hidden"  id="external" name="external" value="1" /><br>
-<!-- <input type="hidden" name="origin" value="Web"> -->
+<input type="hidden" name="origin" value="Web">
 <input type="hidden" name="debug" value="1">
 
 <div class="g-recaptcha" data-sitekey="6LeGsBYsAAAAAOTQ0zR7_XIRI2OT5Tf_eU1HKUQP"></div><br>

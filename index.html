@@ -27,11 +27,11 @@
 <!--  <input type="hidden" name="debugEmail" value="lokess@deloitte.com">     -->
 <!--  ----------------------------------------------------------------------  -->
 
-<label for="name">Contact Name</label><input id="name" maxlength="80" name="name" size="20" type="text" /><br>
+<label for="name">Contact Name</label><input id="name" maxlength="80" name="name" size="20" type="text" required /><br>
 
-<label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+<label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" required /><br>
 
-<label for="subject">Location</label><select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location"><option value="">--None--</option>
+<label for="subject">Location</label><select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location" required><option value="">--None--</option>
 <option value="Acute Hospital, The Dargan Building">Acute Hospital, The Dargan Building</option>
 <option value="Bantry General Hospital">Bantry General Hospital</option>
 <option value="Beaumont Hospital Dublin">Beaumont Hospital Dublin</option>
@@ -80,7 +80,7 @@
 
 <label for="subject">Subject</label><input id="subject" maxlength="80" name="subject" size="20" type="text" required /><br>
 
-<label for="description">Description</label><textarea name="description"></textarea><br>
+<label for="description">Description</label><textarea name="description" required ></textarea><br>
 
 <!-- <label for="status">Status</label><select  id="status" name="status"><option value="">--None--</option><option value="New">New</option>
 <option value="Unassigned">Unassigned</option>
@@ -94,9 +94,9 @@
 <option value="With Third Party">With Third Party</option>
 </select><br> -->
 
-<label for="HAP_HIDS_Case_Reason__c">Query Type</label><select  id="HAP_HIDS_Case_Reason__c" name="HAP_HIDS_Case_Reason__c">
+<label for="hids_Case_Reason">Query Type</label><select  id="hids_Case_Reason" name="HAP_HIDS_Case_Reason__c" required >
 <option value="">--None--</option>
-<option value="IHI Purge">IHI Purge</option>m
+<option value="IHI Purge">IHI Purge</option>
 <option value="DSP Review">DSP Review</option>
 <option value="IHI Assignment">IHI Assignment</option>
 </select><br>

@@ -27,11 +27,12 @@
 <!--  <input type="hidden" name="debugEmail" value="lokess@deloitte.com">     -->
 <!--  ----------------------------------------------------------------------  -->
 
-<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+<label for="name">Contact Name</label><input id="name" maxlength="80" name="name" size="20" type="text" /><br>
 
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+<label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-Location <select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location"><option value="">--None--</option><option value="Acute Hospital, The Dargan Building">Acute Hospital, The Dargan Building</option>
+<label for="subject">Location</label><select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location"><option value="">--None--</option>
+<option value="Acute Hospital, The Dargan Building">Acute Hospital, The Dargan Building</option>
 <option value="Bantry General Hospital">Bantry General Hospital</option>
 <option value="Beaumont Hospital Dublin">Beaumont Hospital Dublin</option>
 <option value="Cavan General Hospital">Cavan General Hospital</option>
@@ -77,7 +78,7 @@ Location <select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location"><
 <option value="Wexford General Hospital">Wexford General Hospital</option>
 </select><br>
 
-<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" required /><br>
+<label for="subject">Subject</label><input id="subject" maxlength="80" name="subject" size="20" type="text" required /><br>
 
 <label for="description">Description</label><textarea name="description"></textarea><br>
 
@@ -93,21 +94,22 @@ Location <select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location"><
 <option value="With Third Party">With Third Party</option>
 </select><br> -->
 
-<label for="reason">Query Type</label><select  id="HAP_Case_Reason__c" name="HAP_Case_Reason__c">
-<option value="IHI Purge">IHI Purge</option>
+<label for="HAP_HIDS_Case_Reason__c">Query Type</label><select  id="HAP_HIDS_Case_Reason__c" name="HAP_HIDS_Case_Reason__c">
+<option value="">--None--</option>
+<option value="IHI Purge">IHI Purge</option>m
 <option value="DSP Review">DSP Review</option>
 <option value="IHI Assignment">IHI Assignment</option>
 </select><br>
 
- <select  type=hidden id="recordType" name="recordType"><option value="012S8000006LVN7">HIDS</option>
-</select><br>
+ <!-- <select  type=hidden id="recordType" name="recordType"><option value="012S8000006LVN7">HIDS</option>
+</select><br> -->
 
  <!-- Query Source:<select  id="00NWV000003IqPq" name="00NWV000003IqPq" title="Query Source">
 <option value="Web">Web</option>
 </select><br> -->
 
 <input type="hidden"  id="external" name="external" value="1" /><br>
-<input type="hidden" name="origin" value="Web">
+<!-- <input type="hidden" name="origin" value="Web"> -->
 <input type="hidden" name="debug" value="1">
 
 <div class="g-recaptcha" data-sitekey="6LeGsBYsAAAAAOTQ0zR7_XIRI2OT5Tf_eU1HKUQP"></div><br>

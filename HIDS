@@ -1,0 +1,117 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://hselive--qa2.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DS8000006BsUg" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"Qa2_webtocase","fallback":"true","orgId":"00DS8000006BsUg","ts":""}'>
+<input type=hidden name="orgid" value="00DS8000006BsUg">
+<input type=hidden name="retURL" value="http://">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail" value="lokess@deloitte.com">     -->
+<!--  ----------------------------------------------------------------------  -->
+
+<label for="name">Contact Name</label><input id="name" maxlength="80" name="name" size="20" type="text" required /><br>
+
+<label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" required /><br>
+
+<label for="subject">Location</label><select  id="00NS800000ICVvJ" name="00NS800000ICVvJ" title="Location"><option value="">--None--</option>
+<option value="Acute Hospital, The Dargan Building">Acute Hospital, The Dargan Building</option>
+<option value="Bantry General Hospital">Bantry General Hospital</option>
+<option value="Beaumont Hospital Dublin">Beaumont Hospital Dublin</option>
+<option value="Cavan General Hospital">Cavan General Hospital</option>
+<option value="CHI Tallaght">CHI Tallaght</option>
+<option value="Connolly Hospital Dublin">Connolly Hospital Dublin</option>
+<!--<option value="Cork University Hospital">Cork University Hospital</option>
+<option value="Dr. Steevens Hospital">Dr. Steevens Hospital</option>
+<option value="ENNIS DAY HOSPITAL">ENNIS DAY HOSPITAL</option>
+<option value="Ennis Hospital">Ennis Hospital</option>
+<option value="Health Centre">Health Centre</option>
+<option value="Letterkenny University Hospital">Letterkenny University Hospital</option>
+<option value="Mallow General Hospital">Mallow General Hospital</option>
+<option value="Mayo University Hospital">Mayo University Hospital</option>
+<option value="Mercy University Hospital">Mercy University Hospital</option>
+<option value="Merlin Park University Hospital (MPUH)">Merlin Park University Hospital (MPUH)</option>
+<option value="Midland Regional Hospital Portlaoise">Midland Regional Hospital Portlaoise</option>
+<option value="Midland Regional Hospital Tullamore">Midland Regional Hospital Tullamore</option>
+<option value="Monaghan Hospital">Monaghan Hospital</option>
+<option value="Naas General Hospital">Naas General Hospital</option>
+<option value="Nenagh Hospital">Nenagh Hospital</option>
+<option value="Our Lady&#39;s Hospital, Navan">Our Lady&#39;s Hospital, Navan</option>
+<option value="Our Lady of Lourdes Hospital Drogheda">Our Lady of Lourdes Hospital Drogheda</option>
+<option value="Portiuncula University Hospital">Portiuncula University Hospital</option>
+<option value="Regional Hospital Mullingar">Regional Hospital Mullingar</option>
+<option value="Roscommon University Hospital">Roscommon University Hospital</option>
+<option value="SAINT ANNE&#39;S DAY HOSPITAL">SAINT ANNE&#39;S DAY HOSPITAL</option>
+<option value="Sligo University Hospital">Sligo University Hospital</option>
+<option value="South Infirmary Victoria University Hospital">South Infirmary Victoria University Hospital</option>
+<option value="St. John&#39;s Hospital (Voluntary)">St. John&#39;s Hospital (Voluntary)</option>
+<option value="St Columcille&#39;s Hospital Loughlinstown Dublin">St Columcille&#39;s Hospital Loughlinstown Dublin</option>
+<option value="St James’s Hospital">St James’s Hospital</option>
+<option value="St Josephs Hospital">St Josephs Hospital</option>
+<option value="St Luke&#39;s General Hospital Kilkenny">St Luke&#39;s General Hospital Kilkenny</option>
+<option value="St Michael&#39;s Hospital, Dun Laoghaire">St Michael&#39;s Hospital, Dun Laoghaire</option>
+<option value="St Vincent&#39;s University Hospital Dublin">St Vincent&#39;s University Hospital Dublin</option>
+<option value="Tallaght University Hospital">Tallaght University Hospital</option>
+<option value="The Mater Misericordiae University Hospital Dublin">The Mater Misericordiae University Hospital Dublin</option>
+<option value="Tipperary University Hospital">Tipperary University Hospital</option>
+<option value="University Hospital Galway (UHG)">University Hospital Galway (UHG)</option>
+<option value="University Hospital Kerry">University Hospital Kerry</option>
+<option value="University Hospital Limerick">University Hospital Limerick</option>
+<option value="University Hospital Waterford">University Hospital Waterford</option>
+<option value="Wexford General Hospital">Wexford General Hospital</option>-->
+</select><br>
+
+<label for="subject">Subject</label><input id="subject" maxlength="80" name="subject" size="20" type="text" required /><br>
+
+<label for="description">Description</label><textarea name="description"></textarea><br>
+
+<!-- <label for="status">Status</label><select  id="status" name="status"><option value="">--None--</option><option value="New">New</option>
+<option value="Unassigned">Unassigned</option>
+<option value="Researching">Researching</option>
+<option value="In Progress">In Progress</option>
+<option value="Waiting For Details">Waiting For Details</option>
+<option value="Waiting For Customer">Waiting For Customer</option>
+<option value="On Hold">On Hold</option>
+<option value="Escalated">Escalated</option>
+<option value="Closed">Closed</option>
+<option value="With Third Party">With Third Party</option>
+</select><br> -->
+
+<label>Query Type</label><select  id="HAP_HIDS_Case_Reason__c" name="HAP_HIDS_Case_Reason__c">
+<option value="">--None--</option>
+<option value="IHI Purge">IHI Purge</option>
+<option value="DSP Review">DSP Review</option>
+<option value="IHI Assignment">IHI Assignment</option>
+</select><br>
+
+ <!-- <select  type=hidden id="recordType" name="recordType"><option value="012S8000006LVN7">HIDS</option>
+</select><br> -->
+
+ <!-- Query Source:<select  id="00NWV000003IqPq" name="00NWV000003IqPq" title="Query Source">
+<option value="Web">Web</option>
+</select><br> -->
+
+<input type="hidden"  id="external" name="external" value="1" /><br>
+<!-- <input type="hidden" name="origin" value="Web"> -->
+<input type="hidden" name="debug" value="1">
+
+<div class="g-recaptcha" data-sitekey="6LcFl0AsAAAAAImVwYZ3Tt7O9AKs8rQxu8Rynq2t"></div><br>
+<input type="submit" name="submit">
+
+</form>

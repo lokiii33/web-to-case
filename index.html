@@ -14,10 +14,10 @@
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
 
-<form action="https://hselive--dev2.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DS8000006BiMV" method="POST">
+<form action="https://hselive--qa2.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DS8000006BsUg" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"webtocase","fallback":"true","orgId":"00DS8000006BiMV","ts":""}'>
-<input type=hidden name="orgid" value="00DS8000006BiMV">
+<input type=hidden name='captcha_settings' value='{"keyname":"Qa2_webtocase","fallback":"true","orgId":"00DS8000006BsUg","ts":""}'>
+<input type=hidden name="orgid" value="00DS8000006BsUg">
 <input type=hidden name="retURL" value="http://">
 
 <!--  ----------------------------------------------------------------------  -->
@@ -27,22 +27,21 @@
 <!--  <input type="hidden" name="debugEmail" value="lokess@deloitte.com">     -->
 <!--  ----------------------------------------------------------------------  -->
 
-Web Case Reason:<input  id="00NS800000KsseE" maxlength="18" name="00NS800000KsseE" size="20" type="text" /><br>
+Web Case Reason:<input  id="00NS800000KwmdT" maxlength="18" name="00NS800000KwmdT" size="20" type="text" /><br>
 
 <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
 
 <label for="description">Description</label><textarea name="description"></textarea><br>
 
 <input type="hidden"  id="external" name="external" value="1" /><br>
-<!--<select  id="recordType" name="recordType"><option value="012S8000006xbOHIAY">YSYS</option></select><br> -->
+
  <input type="hidden" id="status" name="status" value="New" /><br>
 
- <!-- Query Source:<select  id="00NWV000003IqPq" name="00NWV000003IqPq" title="Query Source">
-<option value="Web">Web</option>
-</select><br> -->
-<!-- <input type="hidden" name="origin" value="Web"> -->
 <input type="hidden" name="debug" value="1">
-<div class="g-recaptcha" data-sitekey="6LeGsBYsAAAAAOTQ0zR7_XIRI2OT5Tf_eU1HKUQP"></div><br>
+
+<div class="g-recaptcha" data-sitekey="6LcFl0AsAAAAAImVwYZ3Tt7O9AKs8rQxu8Rynq2t"></div><br>
 <input type="submit" name="submit">
 
 </form>
+
+

@@ -1,9 +1,3 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
-
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
@@ -14,10 +8,10 @@
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
 
-<form action="https://hselive--dev2.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DS8000006BiMV" method="POST">
+<form action="https://hselive--qa2.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DS8000006BsUg" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"webtocase","fallback":"true","orgId":"00DS8000006BiMV","ts":""}'>
-<input type=hidden name="orgid" value="00DS8000006BiMV">
+<input type=hidden name='captcha_settings' value='{"keyname":"Qa2_webtocase","fallback":"true","orgId":"00DS8000006BsUg","ts":""}'>
+<input type=hidden name="orgid" value="00DS8000006BsUg">
 <input type=hidden name="retURL" value="http://">
 
 <!--  ----------------------------------------------------------------------  -->
@@ -33,24 +27,21 @@
 
 <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
 
- Web Subject<input  id="HAP_Subject_Text__c" maxlength="18" name="HAP_Subject_Text__c" size="20" type="text" /><br>
-
 <label for="description">Description</label><textarea name="description"></textarea><br>
 
-Location ID<input  id="00NS800000KdwtR" maxlength="255" name="00NS800000KdwtR" size="20" type="text" /><br>
+Web Subject:<input  id="00NS800000LkAl3" maxlength="18" name="00NS800000LkAl3" size="20" type="text" /><br>
 
-Location Name<input  id="00NS800000KdxJF" maxlength="255" name="00NS800000KdxJF" size="20" type="text" /><br>
+Location ID:<input  id="00NS800000Key8Q" maxlength="255" name="00NS800000Key8Q" size="20" type="text" /><br>
 
+Location Name:<input  id="00NS800000Key8R" maxlength="255" name="00NS800000Key8R" size="20" type="text" /><br>
 Query Type<input  id="HAP_Case_Reason_Text__c" maxlength="18" name="HAP_Case_Reason_Text__c" size="20" type="text" /><br>
 
 <input type="hidden"  id="external" name="external" value="1" /><br>
-
- <input type="hidden" id="status" name="status" value="New" /><br>
+<input type="hidden" id="status" name="status" value="New" /><br>
 
 <input type="hidden" name="debug" value="1">
 
-
-<div class="g-recaptcha" data-sitekey="6LeGsBYsAAAAAOTQ0zR7_XIRI2OT5Tf_eU1HKUQP"></div><br>
+<div class="g-recaptcha" data-sitekey="6LcFl0AsAAAAAImVwYZ3Tt7O9AKs8rQxu8Rynq2t"></div><br>
 <input type="submit" name="submit">
 
 </form>
